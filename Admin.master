@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            max-height: 500px;
+            
+        }
+        .auto-style2 {
+            max-height: 500px;
+            width: 35px;
+        }
+        .auto-style5 {
+            height: 55px;
+        }
+        .auto-style6 {
+            height: 50px;
+        }
+         .auto-style7 {
+            height: 35px;
+        }
+        .auto-style8 {
+            height: 40px;
+        }
+        .auto-style9 {
+            height: 30px;
+        }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body style="background-image:url(college-backgrounds_601659.jpg)">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+    <script type="text/javascript" src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width:100%; height:100%; margin-top:0px">
+           
+            <tr>
+                <td colspan="2" class="auto-style5" style="background-color: #000066; font-size:40px; font-weight:600; font-style:italic; color:white; text-align:center">
+                    
+  COLLEGE DATABASE
+       
+                </td>
+            </tr> 
+            <tr>
+                <td colspan="2" class="auto-style6" style="background-image: url('/bg2.jpg'); font-size: 30px; font-weight: 500; font-style: normal; color:white">Admin Control Panel</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="auto-style9" style="background-color: #666699; font-size: 20px; font-style: normal; font-weight: 400; color: #FFFFFF; text-align: right;">
+                    
+  
+                    <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" NavigateUrl="ShowAll.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="White">About</asp:HyperLink>
+&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="White">Contact Us</asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
+                    <%--<asp:HyperLink ID="HyperLink4" runat="server" ForeColor="White" NavigateUrl="Login.aspx">Log Out</asp:HyperLink>--%>
+                    <asp:LinkButton ID="logoutbtn" runat="server" ForeColor="White" OnClick="logoutbtn_Click" CausesValidation="false">Log Out</asp:LinkButton>
+&nbsp;&nbsp;&nbsp; |
+                    </td>
+            </tr> 
+            <tr style="padding-top:0px;">
+                <td class="auto-style2" style="background-color: #CCFFFF; width:20%; padding-top:0px;">
+                <div class="btn-group-vertical btn btn-block" style="padding-top:0px;padding-left:10px">
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Student</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="addstu.aspx">Add Details</a>
+                        <a class="dropdown-item" href="DisplayStu.aspx">Show and Edit</a>
+                    </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Faculty</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="addfaculty.aspx">Add Details</a>
+                            <a class="dropdown-item" href="disp_fac.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Department</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="addDepartment.aspx">Add Details</a>
+                            <a class="dropdown-item" href="disp_dept.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Subjects</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="addCourses.aspx">Add Details</a>
+                            <a class="dropdown-item" href="disp_courses.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Fees</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="add_Fee_collection.aspx">Collection Entry</a>
+                            <a class="dropdown-item" href="disp_fee_rec.aspx">Collection Details</a>
+                            <a class="dropdown-item" href="add_fee_total.aspx">Add Structure</a>
+                            <a class="dropdown-item" href="disp_fee_tot.aspx">Structure Details</a>
+                        </div>
+                    </div>
+                   
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Faculty-Subjects</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="add_teaches.aspx">Add Details</a>
+                            <a class="dropdown-item" href="disp_teaches.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Student Subjects</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="add_stu_sub.aspx">Add Details</a>
+                            <a class="dropdown-item" href="disp_stu_sub.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                     <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Subject Assessment</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="add_assessment.aspx">Subject Entry</a>
+                            <a class="dropdown-item" href="disp_assessment.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Grade Card</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="addgrade.aspx">Roll-Wise Entry</a>
+                            <a class="dropdown-item" href="disp_grade.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="dropdown">Attendence</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="attendence.aspx">Enter</a>
+                            <a class="dropdown-item" href="disp_attend.aspx">Show and Edit</a>
+                        </div>
+                    </div>
+  
+  <button type="button" class="btn btn-info btn-block" onclick="" hidden="hidden">Samsung</button>
+  
+</div>
+                </td>
+                <td class="auto-style1">&nbsp; &nbsp; &nbsp;
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+             <tr>
+                <td colspan="2" class="auto-style7" style="background-color: #336699"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="auto-style8" style="background-color: #003366"></td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+    <script src="jquery.bootstrap-dropdown-hover.js" type="text/javascript"></script>
+    <script src="jquery.bootstrap-dropdown-hover.min.js" type="text/javascript"></script>
+    
+</body>
+
+</html>

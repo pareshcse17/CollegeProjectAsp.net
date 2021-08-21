@@ -1,0 +1,65 @@
+body{
+    background-color: #562684;
+}
+.btn-primary.btn-outline {
+    color: #724b97;
+  }
+
+.btn-primary,.label-primary, .badge-primary {
+    background-color: #e5007d;
+    border-color: #e5007d;
+    color: #FFFFFF;
+  }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.btn-primary.active:focus {
+  background-color: #724b97;
+  border-color: #724b97;
+  color: #FFFFFF;
+}
+
+.nav > li.active {
+    border-left: 4px solid #e5007d;
+    background: #3e1467;
+}
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
+    background-color: #e5007d;
+    color: white;
+}
+.pace .pace-progress {
+    background: #e5007d;
+}
+.page-heading{
+    box-shadow: 1px 2px 3px rgba(193, 193, 193, 0.12);
+    background: #562684;
+    color: white;
+}
+.nav-header {
+    background: url(patterns/header-profile1.png) no-repeat center center;
+    background-size: cover
+}
+.metismenu .nav-label{text-transform: capitalize}
+.movohr-bg {
+    background-color: #e5007d;
+    color: #ffffff;
+  }
+.text-dark{color: black}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.dashboard .ibox-content {
+    background-color: #ffffff;
+    border-color: #562684;
+    border-width: 2px 0;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(193, 193, 193, 0.12);
+}
